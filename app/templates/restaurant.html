@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}{{ restaurant.name }}{% endblock %}
+
+{% block body %}
+	<h2>{{ restaurant.name }}</h2>
+	<ul>
+		{% for menu in menu_list %}
+			<li>
+				{{ menu.name }}&nbsp;&nbsp;{{ menu.price }}
+				<a href="/delete/{{ menu.id }}">Delete</a>
+				<a href="/edit/{{ menu.id }}">Edit</a>
+			</li>
+		{% endfor %}
+	</ul>
+{% endblock %}

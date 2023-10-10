@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Edit - {{ menu_name }}{% endblock %}
+
+{% block body %}
+	<form method="post">
+		<label>New price for '{{ menu_name }}'</label>
+		<input type="text" name="menu-price">
+
+		<label>New description</label>
+		<textarea name="menu-description"></textarea>
+
+		<input type="submit" value="Update">
+	</form>
+{% endblock %}
